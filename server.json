@@ -1,0 +1,12 @@
+{
+ "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+ "name": "io.github.CYAN-ECLIPSE-TECHNOLOGIES-LLC/eclipse-loft-mcp",
+ "title": "Eclipse Loft MCP",
+ "description": "Governed design-to-print authority for agents \u2014 signed provenance from model to machine, safety",
+ "version": "0.1.0",
+ "websiteUrl": "https://eclipsebazaar.com",
+ "repository": {
+  "url": "https://github.com/CYAN-ECLIPSE-TECHNOLOGIES-LLC/eclipse-loft-mcp",
+  "source": "github"
+ }
+}
