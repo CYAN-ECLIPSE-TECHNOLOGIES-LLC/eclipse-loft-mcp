@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-# Eclipse Strata MCP
+# Eclipse Loft MCP
 # Copyright © 2026 Cyan Eclipse Technologies LLC · cetech.ai
-# Eclipse Strata MCP server — 11 typed tools, stdio JSON-RPC (Strata §8).
+# Eclipse Loft MCP server — 11 typed tools, stdio JSON-RPC (Strata §8).
 
-"""Eclipse Strata — governed design-to-print authority for agents.
+"""Eclipse Loft — governed design-to-print authority for agents.
 Descriptor: governed design-to-print authority for agents — signed provenance
 from model to machine, safety envelopes at the bridge, evidence for every print.
 Transport: MCP over stdio, stdlib only. P0: simulators only.
@@ -68,7 +68,7 @@ def handle(req):
     method = req.get("method"); rid = req.get("id")
     if method == "initialize":
         return {"jsonrpc":"2.0","id":rid,"result":{"protocolVersion":"2024-11-05","capabilities":{"tools":{}},
-                "serverInfo":{"name":"Eclipse Strata","version":eng.VERSION,"description":DESCRIPTOR}}}
+                "serverInfo":{"name":"Eclipse Loft","version":eng.VERSION,"description":DESCRIPTOR}}}
     if method == "tools/list":
         return {"jsonrpc":"2.0","id":rid,"result":{"tools":[{"name":t,"description":f"{t} — {DESCRIPTOR}","inputSchema":{"type":"object"}} for t in TOOLS]}}
     if method == "tools/call":
@@ -101,4 +101,4 @@ def main():
         if req.get("id") is not None: sys.stdout.write(json.dumps(out)+"\n"); sys.stdout.flush()
 
 if __name__ == "__main__": main()
-# Eclipse Strata MCP · © 2026 Cyan Eclipse Technologies LLC · cetech.ai
+# Eclipse Loft MCP · © 2026 Cyan Eclipse Technologies LLC · cetech.ai
